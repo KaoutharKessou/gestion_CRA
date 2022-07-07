@@ -1,0 +1,36 @@
+<nb-card>
+    <nb-card-header>
+     
+    
+      Liste des Jours Fériérs
+      <button mat-button [matMenuTriggerFor]="menu"  style="float:right; margin-left: 1%;" nbbutton="" outline="" ng-reflect-outline="" 
+      g-reflect-status="primary" aria-disabled="false" tabindex="0" class="appearance-outline size-medium shape-rectangle status-primary ng-star-inserted nb-transition"> 
+      <nb-icon icon="menu-outline"></nb-icon> 
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Liste</button>
+        <button mat-menu-item mat-button [matMenuTriggerFor]="submenu">Imprimer
+          <mat-menu #submenu="matMenu">
+            <button mat-menu->Imprimer en tant que liste </button>
+            <button mat-menu-item>Imprimer en tant que résumé</button>
+          </mat-menu>
+        </button>
+        <button mat-menu-item>importer les données</button>
+        <button mat-menu-item>Exporter</button>
+        <button mat-menu-item>Angular</button>
+        <button mat-menu-item>React.js</button>
+      </mat-menu>
+   
+      <button  style="float:right;" nbbutton="" outline="" ng-reflect-outline="" 
+      g-reflect-status="primary" aria-disabled="false" tabindex="0" class="appearance-outline size-medium shape-rectangle status-primary ng-star-inserted nb-transition"> 
+      <nb-icon icon="search-outline"></nb-icon>
+      </button>
+      
+    </nb-card-header>
+  
+    <nb-card-body>
+      <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)" >
+      </ng2-smart-table>
+    </nb-card-body>
+  </nb-card>

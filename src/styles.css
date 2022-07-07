@@ -1,0 +1,14 @@
+  /*for calendar-angular*/
+
+  @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+  @import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+  @import "~ng-pick-datetime/assets/style/picker.min.css";
+
+  :host ::ng-deep .moisJourSemaine
+  {
+    position: absolute !important;
+    right: 17px !important;
+
+  }
+  
